@@ -1,7 +1,7 @@
 import time
 import keyboard
-b = 1
-while b == 1:
+
+while True:
     duration = int(input("combien de temps en minutes? :"))
     while duration >= 0:
         duration -= 1
