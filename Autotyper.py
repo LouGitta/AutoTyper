@@ -1,10 +1,11 @@
 import time
+import keyboard
 
 def main():
 
     print(f"What do you want to do ?\n")
-    print("1. Spelling out a sentence (letter by letter")
-    print("2. Write a sentece in one time")
+    print("1. Spelling out a sentence (letter by letter)")
+    print("2. Write a sentence in one time")
 
     choice = int(input(f"Please choose one of the next proposition !\n"))
 
@@ -30,31 +31,31 @@ def main():
 
                     case 1: 
 
-                        wait = int(input("How many time should i wait between each letter ?\nPlease enter the duration in secondes"))
+                        wait = int(input("How many time i have to write everything ?\nPlease enter the duration in seconds\n"))
                         sentence = str(input(f"Can you give me you're sentence please\n"))
 
                         for letter in sentence :
-                            print(letter)
+                            keyboard.press_and_release(letter)
                             time.sleep(wait)
 
                     case 2:
 
-                        duration = int(input("How many time should i wait between each letter ?\nPlease enter the duration in secondes"))
+                        duration = int(input("How many time should i wait between each letter ?\nPlease enter the duration in seconds\n"))
                         sentence = str(input(f"Can you give me you're sentence please\n"))
 
                         timing = duration/len(sentence)
 
                         for letter in sentence :
-                            print(letter)
+                            keyboard.press_and_release(letter)
                             time.sleep(timing)
 
             elif choice == 2 :
                 sentence = str(input(f"Can you give me you're sentence please\n"))
                 for letter in sentence :
-                    print(letter)
+                    keyboard.press_and_release(letter)
         case 2:
             sentence = str(input(f"Can you give me you're sentence please\n"))
-            print(sentence)
+            keyboard.write(sentence)
 
 
 if __name__ == '__main__':
