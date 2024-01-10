@@ -1,6 +1,6 @@
 import time
 import keyboard
-
+from Waiting import wait
 def main():
 
     print(f"What do you want to do ?\n")
@@ -34,6 +34,7 @@ def main():
                         wait = int(input("How many time i have to write everything ?\nPlease enter the duration in seconds\n"))
                         sentence = str(input(f"Can you give me you're sentence please\n"))
 
+                        wait
                         for letter in sentence :
                             keyboard.press_and_release(letter)
                             time.sleep(wait)
